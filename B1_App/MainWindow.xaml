@@ -1,0 +1,30 @@
+﻿<Window x:Class="B1_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:B1_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="GenerateButton" Content="Generate files" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="GenerateButton_Click" />
+        <Label Name="ProgressGenerate" Content="" HorizontalAlignment="Left" Margin="135,12,0,0" VerticalAlignment="Top" Height="38" Width="175"/>
+        <TextBox Name="ExcludeTextBox" HorizontalAlignment="Left" Margin="10,55,0,0" TextWrapping="Wrap" ToolTip="Enter the text to exclude" VerticalAlignment="Top" Width="120" Height="40"/>
+        <Label Name="ExcludeMessage" Content="" HorizontalAlignment="Left" Margin="135,57,0,0" VerticalAlignment="Top" Height="38" Width="175"/>
+        <Button Name="CombineButton" Content="Combine files" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="CombineButton_Click"/>
+        <Label Name="ProgressCombine" Content="" HorizontalAlignment="Left" Margin="135,102,0,0" VerticalAlignment="Top" Height="38" Width="175"/>
+        <Button Name="ImportButton" Content="Import to database" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="ImportButton_Click"/>
+        <Label Name="ProgressImport" Content="" HorizontalAlignment="Left" Margin="135,147,0,0" VerticalAlignment="Top" Height="38" Width="175"/>
+        <Button Name="CalculateButton" Content="Calculate in database" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="CalculateButton_Click"/>
+        <Label Name="CalculatedResult" Content="" HorizontalAlignment="Left" Margin="135,192,0,0" VerticalAlignment="Top" Height="38" Width="175"/>
+        <Button Name="AddExcelButton" Content="Add Excel" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="AddExcelButton_Click"/>
+        <ListView Name="LoadedFilesList" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0" Width="120" Height="165">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DataGrid Name="LoadedData" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="478,14,23,204"/>
+    </Grid>
+</Window>
